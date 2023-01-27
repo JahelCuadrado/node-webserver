@@ -6,8 +6,6 @@ const port = process.env.PORT;
 //TODO require hbs Handlebars
 var hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials');
-
-
 app.set('view engine', 'hbs');
 
 //Servir contenido estatico
@@ -17,7 +15,7 @@ app.use(express.static('public'));
 //TODO 1: Crear rutas en express
 
 //ruta principal
-app.get(express.static('public'));
+//app.get(express.static('public'));
 
 app.get('/', (req, res) => {
   res.render('home', {
